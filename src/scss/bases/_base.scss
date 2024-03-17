@@ -1,8 +1,14 @@
 *,
 ::after,
 ::before {
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-   font-family: "Gordita", sans-serif;
+    font-family: "Gordita", sans-serif;
+    color: var(--text-color);
+}
+
+.rowBase {
+    display: flex;
+    align-items: center;
 }

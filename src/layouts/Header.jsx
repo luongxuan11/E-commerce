@@ -5,38 +5,39 @@ import { nav } from "../assets/menuManager";
 import icons from "../assets/icons";
 
 const Header = () => {
-    const { logo, Avatar } = images;
+    const { logo, Avatar, user, moreHeader } = images;
     const { CiSearch, CiShoppingCart, CiHeart } = icons;
     return (
         <header className="header">
-            <div className="container">
+            <div className="container top-bar">
+                <img src={moreHeader} alt="grocerymart" className="top-bar__more"/>
                 <Logo logoImage={logo} logoText={"grocerymart"} />
-                <ul className="nav__box">
+                <ul className="nav__box rowBase">
                     {nav.map((item) => {
                         return (
-                            <li key={item.id}>
+                            <li key={item.id} className="rowBase">
                                 <span>{item.text}</span>
-                                <span>{item.icon}</span>
+                                {item.icon}
                             </li>
                         );
                     })}
                 </ul>
-                <div className="top-action">
+                <div className="top-action rowBase">
                     <CiSearch className="top-action__search" />
-                    <div className="top-action__group">
-                        <span>
-                            <CiHeart />
+                    <div className="top-action__group rowBase">
+                        <span className="rowBase">
+                            <CiHeart className="icon" />
                             03
                         </span>
                         <small className="top-action__separate"></small>
-                        <span>
-                            <CiShoppingCart />
+                        <span className="rowBase">
+                            <CiShoppingCart className="icon" />
                             $65.42
                         </span>
                     </div>
                 </div>
                 <div className="top-user">
-                    <img src={Avatar} alt="grocerymart" className="top-user__avatar" />
+                    <img src={user} alt="grocerymart" className="top-user__avatar" />
                 </div>
             </div>
         </header>

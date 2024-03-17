@@ -1,3 +1,102 @@
+@use "../abstracts";
 .header {
-    background: #eeeeee;
+    background: var(--header-bg);
+}
+.top-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    .top-bar__more {
+        display: none;
+        @include abstracts.breakpoints(lg) {
+            display: block;
+            margin-right: 40px;
+            filter: var(--icon-nav-color);
+        }
+    }
+    @include abstracts.breakpoints(sm) {
+        justify-content: space-around;
+        .top-bar__more {
+            margin-right: unset;
+        }
+    }
+}
+
+.nav__box {
+    @include abstracts.breakpoints(xl) {
+        margin-left: 85px;
+    }
+    @include abstracts.breakpoints(lg) {
+        display: none;
+    }
+    margin-left: 144px;
+    gap: 3rem;
+    li {
+        gap: 6px;
+        span {
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.46;
+            cursor: pointer;
+        }
+    }
+    .nav__icon {
+        font-size: 1.2rem;
+    }
+}
+
+.top-action__base {
+    background: var(--top-action-bg);
+    border-radius: 8px;
+}
+.top-action {
+    margin-left: auto;
+    gap: 8px;
+    @include abstracts.breakpoints(sm) {
+        display: none;
+    }
+    .top-action__search {
+        padding: 10px;
+        font-size: 3.8rem;
+        cursor: pointer;
+        @extend .top-action__base;
+        @include abstracts.breakpoints(lg) {
+            display: none;
+        }
+    }
+    .top-action__group {
+        padding: 8px 20px;
+        gap: 20px;
+        @extend .top-action__base;
+        .top-action__separate {
+            width: 2px;
+            height: 20px;
+            background: var(--top-action-separate-bg);
+            display: block;
+        }
+        span {
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+            gap: 10px;
+            .icon {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+.top-user {
+    width: 38px;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-left: 20px;
+    .top-user__avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }

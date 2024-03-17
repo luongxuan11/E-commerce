@@ -1,0 +1,19 @@
+@use "../abstracts";
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    h1 {
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.45;
+    }
+    @include abstracts.breakpoints(lg) {
+        img {
+            width: 24px;
+            aspect-ratio: 1/1;
+        }
+    }
+}
