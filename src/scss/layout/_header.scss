@@ -3,6 +3,7 @@
     background: var(--header-bg);
 }
 .top-bar {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 15px 0;
@@ -39,6 +40,9 @@
             font-weight: 500;
             line-height: 1.46;
             cursor: pointer;
+        }
+        &:hover .dropDown {
+            display: block;
         }
     }
     .nav__icon {

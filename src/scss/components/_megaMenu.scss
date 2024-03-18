@@ -1,0 +1,114 @@
+@use "../abstracts";
+
+.dropDown {
+    position: absolute;
+    left: 0;
+    top: 45px;
+    padding-top: 25px;
+    display: block;
+    width: min(1240px, 100%);
+    .dropDown__img {
+        position: relative;
+        top: 4px;
+        z-index: -1;
+        filter: var(--position-el-bg);
+    }
+    .dropDown__inner {
+        max-height: min(582px, 100vh - 110px);
+        border-radius: 20px;
+        background: var(--megaMenu-bg);
+        box-shadow: 0px 0px 90px 20px var(--megaMenu-shadow);
+        padding: 30px 40px 30px 30px;
+        position: relative;
+    }
+    .top-menu {
+        align-items: flex-start;
+        color: var(--top-menu-main-column-heading-color);
+        %top-menu__common {
+            overflow-y: auto;
+            max-height: calc(min(582px, 100vh - 110px) - 100px);
+        }
+        .top-menu__main {
+            @extend %top-menu__common;
+            width: 280px;
+            border-right: 1px solid var(--top-menu-border);
+        }
+        .menu-column__title {
+            gap: 1.4rem;
+            align-items: flex-start;
+            .icon {
+                @include abstracts.breakpoints(xl) {
+                    display: none;
+                }
+                position: relative;
+                width: 33px;
+                height: 33px;
+                top: 0;
+                left: 0;
+                img {
+                    object-fit: cover;
+                    position: absolute;
+                    &:last-child {
+                        bottom: 0;
+                        right: 0;
+                        filter: var(--top-menu-main-column-icon-heading-color);
+                    }
+                }
+            }
+            .heading {
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.58;
+                margin-bottom: 20px;
+                margin-top: 7px;
+            }
+            .menu-column__list {
+                flex-grow: 1;
+                @include abstracts.breakpoints(xl) {
+                    .heading,
+                    ul {
+                        margin-left: 10px;
+                    }
+                }
+                ul {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .menu-column__list--hover {
+                        width: 100%;
+                        font-size: 1.4rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 1.42;
+                        padding: 14px 0;
+                        &:hover {
+                            color: var(--top-menu-main-column-heading-hover-color);
+                            font-weight: 500;
+                            cursor: pointer;
+                        }
+                    }
+                    .sub-menu__wrapper {
+                        display: none;
+                        grid-template-columns: repeat(3, 1fr);
+                        position: absolute;
+                        inset: 0 0 0 300px;
+                        border-radius: 0 20px 20px 0;
+                        padding: 30px 0 30px 30px;
+                        color: var(--top-menu-main-column-heading-color);
+                        font-weight: 400;
+                        overflow-y: auto;
+                        row-gap: 20px;
+                        .sub-menu__inner {
+                            align-items: flex-start;
+                            gap: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-column__list--hover:hover > .sub-menu__wrapper {
+            display: grid !important;
+        }
+    }
+}

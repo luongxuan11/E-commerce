@@ -6,6 +6,19 @@
 body {
     font-family: "Gordita", sans-serif;
     color: var(--text-color);
+    background: var(--global-bg);
+    .custom-scroll {
+        &::-webkit-scrollbar {
+            width: 4px;
+            overflow: hidden;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 999px;
+            background: var(--custom-scroll);
+        }
+        &::-webkit-scrollbar-track {
+        }
+    }
 }
 
 .rowBase {

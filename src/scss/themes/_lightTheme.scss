@@ -1,7 +1,16 @@
 html {
+    --custom-scroll: #d3d3d3a8;
     --text-color: #1a162e;
     --header-bg: #eee;
+    --global-bg: #fff;
     --top-action-bg: #fff;
     --top-action-separate-bg: #ededf6;
     --icon-nav-color: brightness(0) saturate(100%) invert(8%) sepia(9%) saturate(5044%) hue-rotate(213deg) brightness(92%) contrast(95%);
+    --megaMenu-bg: #fff;
+    --megaMenu-shadow: rgba(200, 200, 200, 0.4);
+    --position-el-bg: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(4811%) hue-rotate(312deg) brightness(118%) contrast(95%);
+    --top-menu-border: #D2D1D6;
+    --top-menu-main-column-heading-color: #1A162E;
+    --top-menu-main-column-heading-hover-color: #0071DC;
+    --top-menu-main-column-icon-heading-color: brightness(0) saturate(100%) invert(8%) sepia(8%) saturate(4931%) hue-rotate(212deg) brightness(93%) contrast(95%);
 }

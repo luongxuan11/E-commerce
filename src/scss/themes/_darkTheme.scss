@@ -1,7 +1,16 @@
 html.dark {
+    --custom-scroll: #444c5d8e;
     --text-color: #ffffff;
     --header-bg: #171c28;
+    --global-bg: #292e39;
     --top-action-bg: #292e39;
     --top-action-separate-bg: #ededf6;
     --icon-nav-color: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(7500%) hue-rotate(30deg) brightness(100%) contrast(103%);
+    --position-el-bg: brightness(0) saturate(100%) invert(19%) sepia(12%) saturate(925%) hue-rotate(185deg) brightness(93%) contrast(92%);
+    --top-menu-border: #171c28;
+    --top-menu-main-column-heading-color: #b9babe;
+    --top-menu-main-column-heading-hover-color: #0071dc;
+    --megaMenu-shadow: rgba(23, 28, 40, 0.4);
+    --megaMenu-bg: #292e39;
+    --top-menu-main-column-icon-heading-color: brightness(0) saturate(100%) invert(98%) sepia(51%) saturate(516%) hue-rotate(279deg) brightness(107%) contrast(97%);
 }
